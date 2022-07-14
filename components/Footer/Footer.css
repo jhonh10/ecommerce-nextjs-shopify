@@ -1,0 +1,11 @@
+.banner__payu {
+    margin: 0 auto;
+    width: 30%;
+    object-fit: contain;
+}
+.footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+

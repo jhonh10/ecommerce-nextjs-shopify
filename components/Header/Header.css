@@ -1,0 +1,118 @@
+.header-3 {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12);
+  }
+  .header__mid {
+    background-color: #ffffff;
+    position: relative;
+  }
+  .logo {
+    padding: 10px 0;
+  }
+  .regular__logo {
+    display: inline-block !important;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .branding {
+    font-size: 14px;
+    margin: inherit;
+    padding: 10px 0;
+    transition: all 0.5s;
+  }
+  nav > ul {
+    list-style: inside;
+    padding: 0;
+    margin: 0;
+  }
+  nav > ul > li {
+    float: left;
+    font-size: 14px;
+    list-style: none;
+    position: relative;
+  }
+  .menu li:not(:first-child) {
+    margin-left: 35px;
+  }
+  .menu > li > a {
+    color: #5e5a54;
+    line-height: 80px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .menu > li > a:hover {
+    text-decoration: none;
+    outline: 0;
+    color: #222;
+  }
+  .action > * {
+    padding: 0 6px;
+  }
+  .action > i {
+    font-size: 28px;
+    top: 10px;
+  }
+  .chp {
+    width: auto;
+    height: auto;
+  }
+  .chp > i {
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    height: 100%;
+    line-height: inherit;
+  }
+  .anchos {
+    width: 28px;
+    height: 48px;
+    color: black;
+  }
+  .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .counter {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    font-size: 12px;
+    font-weight: bold;
+    color: #222;
+    line-height: 22px;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+    left: 14px;
+    top: 0px;
+  }
+  @media only screen and (max-width: 1500px) {
+    .branding {
+      margin: auto;
+      text-align: center;
+    }
+    .hmb {
+      text-align: start;
+    }
+    .hmb-push {
+      cursor: pointer;
+    }
+  }
+  
+  @media only screen and (max-width: 736px) {
+    .action > * {
+      padding: 0 4px;
+    }
+    .chp > i {
+      font-size: 24px;
+    }
+  }
+  
