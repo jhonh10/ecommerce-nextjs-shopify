@@ -1,6 +1,6 @@
 ## Ecommerce NextJs + Shopify API + Graphql
 
-Este proyecto se encuentra en etaoa de desarrollo y la intencion de este proyecto es fortalecer habilidades.
+Este proyecto se encuentra en etapa de desarrollo y la intencion de este proyecto es fortalecer habilidades.
 
 Tecnologias utilizadas. 
 Next Js + Shopify API Graphql
