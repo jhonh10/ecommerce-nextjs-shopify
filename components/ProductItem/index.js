@@ -13,7 +13,7 @@ export default function ProductItem({ product }) {
 
     const [descuento] = useState(true);
     const [hotSale] = useState(true)
-   // const { addProduct, cartItems, increase } = useContext(CartContext);
+    // const { addProduct, cartItems, increase } = useContext(CartContext);
 
 
     /*const isInCart = product => {
@@ -33,21 +33,13 @@ export default function ProductItem({ product }) {
                         }
                     </Link>
                     {hotSale && (<span className="product-trend-label" role="img" aria-label="">🔥hot</span>)}
-                    {descuento && (<span className="product-discount-label">-20%</span>)}
-                    <ul className="social">
-                        {
-                           // !isInCart(product) &&
-                            <li><Link href="" /*onClick={() => addProduct(product)} */data-tip="Añadir al carrito"><i className="fa fa-shopping-cart"></i></Link></li>
-                        }
-
-                        <li><a data-tip="Vista Rapida"><i className="fa fa-eye"></i></a></li>
-                    </ul>
+                    {descuento && (<span className="product-discount-label">-20%</span>)}        
                 </div>
                 <div className="product-content">
                     <h3 className="title"><Link href={`product/${slug}`}><a>{product.node.title}</a></Link></h3>
                     <CurrencyFormat
                         renderText={(value) => (
-                            <div className="price discount"><span>$17.00</span> {`${value}`}</div>
+                            <div className="price discount"><span>$17.000</span> {`${value}`}</div>
                         )}
                         decimalScale={2}
                         fixedDecimalScale={true}

@@ -20,7 +20,7 @@ export default function PhotoSwipeWrapper(props) {
 
         const imgs = []
         props.items.map(item => {
-            imgs.push({ ...item.node, w: 768, h: 980, src:item.node.transformedSrc})
+            imgs.push({ ...item.node, w: 1000, h: 750, src:item.node.transformedSrc})
         })
         const photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgs, options);
 
