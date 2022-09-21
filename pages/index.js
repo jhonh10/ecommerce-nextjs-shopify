@@ -5,7 +5,7 @@ import ProductsGrid from '../components/ProductsGrid'
 
 export default function Home({ title, products }) {
   return (
-    <Layout title={title} description="This is the Store page" >
+    <Layout title={title} description="Ropa para dama" >
       <div >
         <div className="text-center mt-5">
           <h1>Productos</h1>
