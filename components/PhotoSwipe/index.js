@@ -6,12 +6,12 @@ import 'photoswipe/dist/default-skin/default-skin.css'
 
 
 
-export default function PhotoSwipeWrapper(props) {
+export default function PhotoSwipeWrapper({ items, isOpen, onClose, index }) {
 
     let pswpElement = useRef(null);
 
     const options = {
-        index: props.index || 0,
+        index: index || 0,
         closeOnScroll: false,
         history: false
     };
@@ -19,28 +19,32 @@ export default function PhotoSwipeWrapper(props) {
     useEffect(() => {
 
         const imgs = []
-        props.items.map(item => {
-            imgs.push({ ...item.node, w: 1000, h: 750, src:item.node.transformedSrc})
+        items.map(item => {
+            const img = new Image();
+            img.src = item.node.transformedSrc
+            const w = img.width
+            const h = img.height
+            imgs.push({ ...item.node, w, h, src: img.src })
         })
         const photoSwipe = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgs, options);
 
         if (photoSwipe) {
-            if (props.isOpen) {
+            if (isOpen) {
                 photoSwipe.init();
 
                 photoSwipe.listen('destroy', () => {
-                    props.onClose();
+                    onClose();
                 });
 
                 photoSwipe.listen('close', () => {
-                    props.onClose();
+                    onClose();
                 });
             }
-            if (!props.isOpen) {
-                props.onClose();
+            if (!isOpen) {
+                onClose();
             }
         }
-    }, [props, options]);
+    }, [items, options]);
     return (
         <div
             className="pswp"
